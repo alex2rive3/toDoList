@@ -1,0 +1,133 @@
+:root{
+    --primary:#427AA1;
+    --secondary: #0D3B66;
+    --white: #fff;
+    --dark:#08090A;
+    --diabled: #EEF0F2;
+    --backColor:#949B96;
+    --red:#E10600;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    height: 700px;
+    background-color: var(--backColor);
+}
+*::first-letter{
+    text-transform: capitalize;
+}
+
+.bordeRedondo{
+    border-radius: 5px;
+}
+
+.lista{
+    margin: 25px auto;
+    padding: 25px;
+    background-color: var(--white);
+    width: 100%;
+    max-width: 350px;
+}
+.fecha{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fechAlaDerecha{
+    display: flex;
+    align-items: center;
+}
+#diaNumero{
+    font-size: 50px;
+}
+#diaLetra{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#mes, 
+#anho,
+#diaLetra{
+    font-weight: bold;
+}
+
+#mes,
+#anho{
+    margin-left: 7px;
+    font-size: 20px;
+}
+form{
+    margin: 20px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 35px auto;
+    grid-column-gap: 15px;
+}
+input{
+    border: none;
+    padding-left: 10px;
+    background-color: var(--diabled);
+}
+
+input:focus{
+    outline: none;
+}
+
+.botonAgregarTarea,
+.botonOrdenar,
+.eliminarTarea{
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.botonAgregarTarea:hover{
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.botonAgregarTarea{
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: var(--diabled);
+}
+.botonOrdenar:hover{
+    background-color: var(--primary);
+}
+
+.eliminarTarea{
+    height: 25px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: var(--dark);
+    margin-right: 5px;
+    background-color: var(--white);
+}
+.eliminarTarea:hover{
+    height: 25px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: var(--white);
+    margin-right: 5px;
+    background-color: var(--red);
+}
+.botonOrdenar{
+    background-color: var(--secondary);
+    color: var(--white);
+}
+.tarea {
+    background-color: var(--primary);
+    padding: 15px;
+    margin-top: 15px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.tarea:hover{
+    transform: scale(1.05);
+}
+.hecho{
+    background-color: var(--diabled);
+    text-decoration: line-through;
+    color: var(--dark);
+}
